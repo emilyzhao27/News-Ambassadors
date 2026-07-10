@@ -285,31 +285,12 @@
 </section>
 
 <!-- TESTIMONIALS with crumpled paper texture -->
-<section style="position:relative;padding:7rem 1.5rem;background:#F5F2EE;overflow:hidden;">
-  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-    <filter id="crumple-paper" x="0%" y="0%" width="100%" height="100%">
-      <feTurbulence type="turbulence" baseFrequency=".018 .025" numOctaves="10" seed="9" result="t"/>
-      <feDiffuseLighting in="t" lighting-color="#ffffff" surfaceScale="20" result="l"><feDistantLight azimuth="40" elevation="45"/></feDiffuseLighting>
-      <feColorMatrix in="l" type="saturate" values="0" result="g"/>
-      <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
-    </filter>
-    <rect width="100%" height="100%" filter="url(#crumple-paper)" fill="#EDE9E2" opacity="0.6"/>
-  </svg>
-  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:1;">
+<section style="padding:7rem 1.5rem;background:#F5F2EE;">
+  <div style="max-width:1200px;margin:0 auto;">
     <span class="overline reveal">From Participants</span>
     <h2 class="ff-display reveal" style="font-size:clamp(2rem,4vw,2.9rem);font-weight:700;line-height:1.18;margin-bottom:3.5rem;max-width:520px;">What students say after training.</h2>
 
-    <!-- Photos -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:4rem;">
-      <div class="reveal" style="aspect-ratio:16/9;background:#DDD;overflow:hidden;">
-        <img src="zoom1.jpg" alt="News Ambassadors virtual training session with students and Shia Levitt" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#E8E4F0';this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;padding:2rem;text-align:center;\'><p style=\'font-size:.82rem;color:#888;\'>Training session photo</p></div>'">
-      </div>
-      <div class="reveal" style="aspect-ratio:16/9;background:#DDD;overflow:hidden;">
-        <img src="zoom2.jpg" alt="News Ambassadors virtual session featuring Gheni Platenburg with student reporters" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#E8E4F0';this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;padding:2rem;text-align:center;\'><p style=\'font-size:.82rem;color:#888;\'>Training session photo</p></div>'">
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;">
       <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"Those 22 questions... literally should be in every single journalism class around the world."</p><footer style="font-size:.78rem;color:var(--light);">Nino, Montclair Student</footer></blockquote>
       <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--mint);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"It's almost like bringing more humanity into the reporting process..."</p><footer style="font-size:.78rem;color:var(--light);">Calvin, Northwestern Student</footer></blockquote>
       <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--yellow);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"It's not a vertical approach of journalism... it's more of a circular approach."</p><footer style="font-size:.78rem;color:var(--light);">Santiago, NA Fellow, Latino News Network</footer></blockquote>
