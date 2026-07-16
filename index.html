@@ -50,7 +50,7 @@
     .res-item:hover .res-title { color:var(--purple); }
     .res-title { font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.2rem;transition:color .15s; }
     .res-desc { font-size:.8rem;color:var(--muted);line-height:1.55; }
-    .footer-link { color:rgba(255,255,255,.55);text-decoration:none;font-size:.875rem;transition:color .2s; }
+    .footer-link { color:rgba(255,255,255,.85);text-decoration:none;font-size:.875rem;transition:color .2s; }
     .footer-link:hover { color:#fff; }
     .tab-btn { font-family:'DM Sans',sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.04em;padding:.6rem 1.25rem;text-decoration:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:color .2s,border-color .2s;background:none;border-top:none;border-left:none;border-right:none; }
     .tab-btn:hover,.tab-btn.active { color:var(--purple);border-bottom-color:var(--purple); }
@@ -83,7 +83,7 @@
       <a href="#work" class="nav-link">Featured Work</a>
       <a href="#resources" class="nav-link">Resources</a>
       <a href="#contact" class="nav-link">Contact</a>
-      <a href="https://bridgealliance.app.neoncrm.com/forms/34" target="_blank" rel="noopener" class="btn-primary" style="padding:.45rem 1.1rem;font-size:.78rem;">Newsletter</a>
+      <a href="#trainings" class="btn-primary" style="padding:.45rem 1.1rem;font-size:.78rem;margin-left:.25rem;">Get Training</a>
     </div>
     <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" style="background:none;border:none;cursor:pointer;padding:4px;display:flex;flex-direction:column;gap:5px;" class="md:hidden" aria-label="Menu">
       <span style="width:20px;height:1.5px;background:var(--ink);display:block;"></span>
@@ -103,13 +103,13 @@
 </nav>
 
 <!-- HERO -->
-<section id="top" style="padding:140px 1.5rem 80px;">
+<section id="top" style="padding:140px 1.5rem 80px;background-image:radial-gradient(circle,#DEDEDE 1px,transparent 1px);background-size:22px 22px;">
   <div style="max-width:760px;margin:0 auto;">
     <h1 class="ff-display reveal" style="font-size:clamp(2.75rem,5.5vw,4.75rem);font-weight:800;line-height:1.07;letter-spacing:-.025em;margin-bottom:1.75rem;">
-      Helping local newsrooms cover<br><em style="color:var(--purple);">what matters.</em>
+      Solutions Journalism.<br>Depolarization.<br><em style="color:var(--purple);">Community-centered reporting.</em>
     </h1>
     <p class="reveal" style="font-size:1.05rem;color:var(--muted);line-height:1.85;margin-bottom:2rem;">
-      News Ambassadors enlists college journalism students to help local newsrooms fill gaps in coverage of underreported communities, training them on Solutions Journalism, Depolarization strategies, and community-responsive reporting.
+      News Ambassadors trains college journalism students and newsrooms in Solutions Journalism, Depolarization reporting strategies, and community engagement — helping local newsrooms fill coverage gaps in underreported communities.
     </p>
     <div class="reveal" style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
       <a href="#about" class="btn-primary">Learn More</a>
@@ -119,12 +119,15 @@
 </section>
 
 <!-- STATS -->
-<section style="background:#FAFAFA;padding:3rem 1.5rem;border-top:1px solid #EBEBEB;border-bottom:1px solid #EBEBEB;">
-  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem;">
-    <div class="reveal" style="text-align:center;"><div class="stat-num">70</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Students Trained</div></div>
-    <div class="reveal" style="text-align:center;"><div class="stat-num">10</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">University Campuses</div></div>
-    <div class="reveal" style="text-align:center;"><div class="stat-num">4</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Partner Public Radio Stations</div></div>
-    <div class="reveal" style="text-align:center;"><div class="stat-num">3</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Core Frameworks</div></div>
+<section style="background:#FAFAFA;padding:3rem 1.5rem 2rem;border-top:1px solid #EBEBEB;border-bottom:1px solid #EBEBEB;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem;margin-bottom:1.25rem;">
+      <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="70">70</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Students Trained</div></div>
+      <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="10">10</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">University Campuses</div></div>
+      <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="4">4</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Partner Public Radio Stations</div></div>
+      <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="3">3</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Core Frameworks</div></div>
+    </div>
+    <p style="font-size:.72rem;color:var(--light);text-align:center;">Source: News Ambassadors program data, 2023-2024 expanded pilot</p>
   </div>
 </section>
 
@@ -234,6 +237,21 @@
       <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"As someone who has been conflicted about calling themself a journalist, the concept of Solutions Journalism made me realize the positive impact journalism can have."</p><footer style="font-size:.78rem;color:var(--light);">Survey respondent, Depolarization Training</footer></blockquote>
       <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"She gave me actual tools... the Solutions Journalism tracker and sites that help identify news coverage gaps. That was a game-changer."</p><footer style="font-size:.78rem;color:var(--light);">NA Fellow, on mentorship</footer></blockquote>
       <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"Even if it is a place that hires me to do story, story, story, I'm still going to take these 22 questions with me."</p><footer style="font-size:.78rem;color:var(--light);">Nino, Montclair Student</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER STRIP -->
+<section style="padding:2.5rem 1.5rem;background:#FAFAFA;border-top:1px solid #EBEBEB;border-bottom:1px solid #EBEBEB;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <p class="ff-heading" style="font-weight:700;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:1.5rem;text-align:center;">Partner Universities &amp; Newsrooms</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;align-items:center;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">University of Missouri School of Journalism</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">Columbia University Graduate School of Journalism</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">Northwestern University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">Montclair State University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">Latino News Network</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;"><a href="https://www.kbia.org" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">KBIA</a></span>
     </div>
   </div>
 </section>
@@ -378,11 +396,6 @@
           <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:.4rem;">A feature story examining an innovative Chicago newsroom model that centers community ownership, produced through the News Ambassadors program.</p>
         </a>
 
-        <a href="https://digitalcitizen.tv/2021/04/18/news-ambassadors-5-min/" target="_blank" rel="noopener" class="story-card">
-          <div class="story-meta" style="margin-bottom:.4rem;">DigitalCitizen.tv &middot; 2021</div>
-          <div class="story-title">News Ambassadors: COVID Regional Differences Audio Series</div>
-          <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-top:.4rem;">The original 2021 audio series with student reporters in five states exploring regional differences on issues surrounding the COVID-19 virus across the US.</p>
-        </a>
       </div>
     </div>
   </div>
@@ -536,12 +549,60 @@
       <a href="https://www.bridgealliance.us/" target="_blank" rel="noopener" style="display:flex;align-items:center;padding:1rem 1.5rem;background:#FAFAFA;border:1px solid #EBEBEB;">
         <img src="images.png" alt="Bridge Alliance Education Fund" style="height:44px;width:auto;display:block;object-fit:contain;">
       </a>
+      <a href="#" style="display:flex;align-items:center;padding:1rem 1.5rem;background:#FAFAFA;border:1px solid #EBEBEB;">
+        <img src="images%20(1).png" alt="Sponsor" style="height:44px;width:auto;display:block;object-fit:contain;">
+      </a>
       <a href="https://listeningpostcollective.org/" target="_blank" rel="noopener" style="display:flex;align-items:center;padding:1rem 1.5rem;background:#FAFAFA;border:1px solid #EBEBEB;">
         <img src="Listening-Post-Collective.png" alt="Listening Post Collective" style="height:44px;width:auto;display:block;object-fit:contain;">
       </a>
       <a href="https://scripps.com/fund/" target="_blank" rel="noopener" style="display:flex;align-items:center;padding:1rem 1.5rem;background:#FAFAFA;border:1px solid #EBEBEB;">
         <img src="ScrippsHowardFund-Logo-Black2.webp" alt="Scripps Howard Fund" style="height:44px;width:auto;display:block;object-fit:contain;">
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding:7rem 1.5rem;background:#FAFAFA;border-top:1px solid #EBEBEB;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <span class="overline reveal">FAQ</span>
+    <h2 class="ff-display reveal" style="font-size:clamp(2rem,4vw,2.9rem);font-weight:700;line-height:1.18;margin-bottom:3rem;max-width:520px;">Common questions.</h2>
+    <div style="max-width:720px;display:flex;flex-direction:column;gap:0;">
+      <details class="reveal" style="border-top:1px solid #EBEBEB;padding:1.5rem 0;">
+        <summary style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Who is News Ambassadors for?
+          <span style="color:var(--purple);font-size:1.2rem;line-height:1;flex-shrink:0;margin-left:1rem;">+</span>
+        </summary>
+        <p style="margin-top:1rem;color:var(--muted);line-height:1.85;font-size:.95rem;">News Ambassadors works with journalism schools, university newsrooms, public radio stations, and individual reporters or reporting fellows. Trainings are designed for journalism students and early-career journalists who want to deepen their practice in solutions reporting, depolarization strategies, and community engagement.</p>
+      </details>
+      <details class="reveal" style="border-top:1px solid #EBEBEB;padding:1.5rem 0;">
+        <summary style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          What does a training involve?
+          <span style="color:var(--purple);font-size:1.2rem;line-height:1;flex-shrink:0;margin-left:1rem;">+</span>
+        </summary>
+        <p style="margin-top:1rem;color:var(--muted);line-height:1.85;font-size:.95rem;">Trainings are led by director Shia Levitt, an accredited trainer in both Solutions Journalism and Complicating the Narratives (CTN). Sessions cover one or more of our three core frameworks and are adapted to the specific context of your classroom or newsroom. Trainees leave with practical tools, resources, and frameworks they can apply immediately to their reporting.</p>
+      </details>
+      <details class="reveal" style="border-top:1px solid #EBEBEB;padding:1.5rem 0;">
+        <summary style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Are trainings in-person or virtual?
+          <span style="color:var(--purple);font-size:1.2rem;line-height:1;flex-shrink:0;margin-left:1rem;">+</span>
+        </summary>
+        <p style="margin-top:1rem;color:var(--muted);line-height:1.85;font-size:.95rem;">News Ambassadors offers both in-person and virtual training options. We work with journalism programs and newsrooms across the country. Reach out through the contact form to discuss what format works best for your team.</p>
+      </details>
+      <details class="reveal" style="border-top:1px solid #EBEBEB;padding:1.5rem 0;">
+        <summary style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Is there a cost for training?
+          <span style="color:var(--purple);font-size:1.2rem;line-height:1;flex-shrink:0;margin-left:1rem;">+</span>
+        </summary>
+        <p style="margin-top:1rem;color:var(--muted);line-height:1.85;font-size:.95rem;">News Ambassadors is a project of the Bridge Alliance Education Fund, a 501(c)(3) nonprofit. Training costs vary based on scope and format. Contact us to discuss your program's needs and what options are available.</p>
+      </details>
+      <details class="reveal" style="border-top:1px solid #EBEBEB;border-bottom:1px solid #EBEBEB;padding:1.5rem 0;">
+        <summary style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          How do we get started?
+          <span style="color:var(--purple);font-size:1.2rem;line-height:1;flex-shrink:0;margin-left:1rem;">+</span>
+        </summary>
+        <p style="margin-top:1rem;color:var(--muted);line-height:1.85;font-size:.95rem;">Use the interest form below for classrooms and newsrooms, or email us directly at <a href="mailto:sojonewsambassadors@gmail.com" style="color:var(--purple);text-decoration:none;font-weight:600;">sojonewsambassadors@gmail.com</a>. We'll respond to set up a conversation about your program's goals and how News Ambassadors can help.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -582,7 +643,7 @@
         <p style="font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:.6rem;">Training interest forms:</p>
         <div style="display:flex;flex-direction:column;gap:.4rem;">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSetWSNbnSZ0yjbGY9fhAUdq-xJRzjZCAQuILVtns6MXuBstiQ/viewform" target="_blank" rel="noopener" style="font-size:.85rem;color:var(--purple);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:.5rem;"><span style="width:4px;height:4px;background:var(--purple);display:inline-block;flex-shrink:0;"></span>Classrooms &amp; Newsrooms Interest Form</a>
-          <a href="mailto:sojonewsambassadors@gmail.com" style="font-size:.85rem;color:var(--purple);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:.5rem;"><span style="width:4px;height:4px;background:var(--purple);display:inline-block;flex-shrink:0;"></span>Individuals &amp; Non-Journalists: Email us</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJBEw5HXZhCNj4X2W2F6EJLr8I7h_cRDWwkY3GgxpDYF-XNA/viewform" target="_blank" rel="noopener" style="font-size:.85rem;color:var(--purple);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:.5rem;"><span style="width:4px;height:4px;background:var(--purple);display:inline-block;flex-shrink:0;"></span>Individuals &amp; Non-Journalists Interest Form</a>
         </div>
       </div>
     </div>
@@ -604,11 +665,16 @@
         <div style="margin-bottom:1rem;">
           <img src="NewsAmbassadors-color-Horizontal.png" alt="News Ambassadors" style="height:32px;width:auto;display:block;filter:brightness(0) invert(1);">
         </div>
-        <p style="font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.8;max-width:240px;margin-bottom:1.25rem;">A project of the Bridge Alliance Education Fund. Training journalists to strengthen local news.</p>
-        <a href="mailto:sojonewsambassadors@gmail.com" style="color:rgba(255,255,255,.4);font-size:.8rem;text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,.8)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">sojonewsambassadors@gmail.com</a>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.8);line-height:1.8;max-width:240px;margin-bottom:1.25rem;">A project of the Bridge Alliance Education Fund. Training journalists to strengthen local news.</p>
+        <a href="mailto:sojonewsambassadors@gmail.com" style="color:rgba(255,255,255,.75);font-size:.8rem;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.75)'">sojonewsambassadors@gmail.com</a>
+        <div style="display:flex;gap:1rem;margin-top:1.25rem;">
+          <a href="#" aria-label="LinkedIn" style="color:rgba(255,255,255,.6);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.6)'"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" aria-label="Instagram" style="color:rgba(255,255,255,.6);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.6)'"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="#" aria-label="X / Twitter" style="color:rgba(255,255,255,.6);transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.6)'"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.258 5.63 5.906-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
       </div>
       <div>
-        <p class="ff-heading" style="font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1rem;">About</p>
+        <p class="ff-heading" style="font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:1rem;">About</p>
         <div style="display:flex;flex-direction:column;gap:.6rem;">
           <a href="#about" class="footer-link">About NA</a>
           <a href="#frameworks" class="footer-link">Our Frameworks</a>
@@ -616,7 +682,7 @@
         </div>
       </div>
       <div>
-        <p class="ff-heading" style="font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1rem;">Explore</p>
+        <p class="ff-heading" style="font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:1rem;">Explore</p>
         <div style="display:flex;flex-direction:column;gap:.6rem;">
           <a href="#trainings" class="footer-link">Trainings</a>
           <a href="#work" class="footer-link">Featured Work</a>
@@ -624,7 +690,7 @@
         </div>
       </div>
       <div>
-        <p class="ff-heading" style="font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1rem;">Connect</p>
+        <p class="ff-heading" style="font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:1rem;">Connect</p>
         <div style="display:flex;flex-direction:column;gap:.6rem;">
           <a href="https://bridgealliance.app.neoncrm.com/forms/34" target="_blank" rel="noopener" class="footer-link">Newsletter</a>
           <a href="#contact" class="footer-link">Contact</a>
@@ -633,7 +699,7 @@
       </div>
     </div>
     <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
-      <p style="font-size:.78rem;color:rgba(255,255,255,.25);">&copy; 2025 News Ambassadors. A project of the Bridge Alliance Education Fund, a 501(c)(3) nonprofit.</p>
+      <p style="font-size:.78rem;color:rgba(255,255,255,.65);">&copy; 2025 News Ambassadors. A project of the Bridge Alliance Education Fund, a 501(c)(3) nonprofit.</p>
       <p style="font-size:.78rem;color:rgba(255,255,255,.15);">Built with D1 Vibe Coding</p>
     </div>
   </div>
@@ -652,6 +718,30 @@
   var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.08});
   document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
 })();
+(function(){
+  var counters=document.querySelectorAll('.stat-num[data-target]');
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      var el=entry.target,target=parseInt(el.dataset.target,10),duration=1400,startTime=null;
+      function tick(ts){
+        if(!startTime) startTime=ts;
+        var p=Math.min((ts-startTime)/duration,1),ease=1-Math.pow(1-p,3);
+        el.textContent=Math.round(ease*target);
+        if(p<1) requestAnimationFrame(tick); else el.textContent=target;
+      }
+      requestAnimationFrame(tick);
+      observer.unobserve(el);
+    });
+  },{threshold:.4});
+  counters.forEach(function(el){el.textContent='0';observer.observe(el);});
+})();
+document.querySelectorAll('details').forEach(function(d){
+  d.addEventListener('toggle',function(){
+    var s=d.querySelector('summary span:last-child');
+    if(s) s.textContent=d.open?'−':'+';
+  });
+});
 </script>
 </body>
 </html>
