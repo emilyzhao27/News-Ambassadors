@@ -29,7 +29,16 @@
     .reveal:nth-child(2){transition-delay:.07s}.reveal:nth-child(3){transition-delay:.14s}
     .reveal:nth-child(4){transition-delay:.21s}.reveal:nth-child(5){transition-delay:.28s}
     .reveal:nth-child(6){transition-delay:.35s}
-    .overline { font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--purple);display:block;margin-bottom:1rem; }
+    .overline { font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--purple);display:flex;align-items:center;gap:.6rem;margin-bottom:1rem; }
+    .overline::before { content:'';display:block;width:20px;height:2px;background:var(--purple);flex-shrink:0; }
+    .res-item { display:flex;align-items:flex-start;gap:1rem;padding:1.1rem .75rem;border:1px solid transparent;border-bottom:1px solid #EBEBEB;text-decoration:none;color:var(--ink);transition:color .15s,border-color .15s,background .15s; }
+    .res-item:last-child { border-bottom:1px solid transparent; }
+    .res-item:hover { border-color:#DCDCDC;background:#FAFAFA; }
+    /* dot nav */
+    #dot-nav { position:fixed;right:1.25rem;top:50%;transform:translateY(-50%);z-index:400;display:flex;flex-direction:column;gap:.6rem; }
+    #dot-nav a { width:8px;height:8px;display:block;border:1.5px solid var(--purple);background:transparent;transition:background .2s,transform .2s; }
+    #dot-nav a.active { background:var(--purple);transform:scale(1.25); }
+    @media(max-width:768px){ #dot-nav { display:none; } }
     .nav-link { font-family:'DM Sans',sans-serif;font-size:.875rem;font-weight:500;color:var(--ink);text-decoration:none;transition:color .2s; }
     .nav-link:hover { color:var(--purple); }
     .btn-primary { display:inline-block;background:var(--purple);color:#fff;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.875rem;padding:.75rem 2rem;text-decoration:none;cursor:pointer;letter-spacing:.02em;transition:background .2s; }
@@ -70,6 +79,19 @@
 <body>
 <div class="progress-bar"></div>
 
+<!-- DOT NAV -->
+<nav id="dot-nav" aria-label="Page sections">
+  <a href="#top" title="Top" class="active"></a>
+  <a href="#about" title="About"></a>
+  <a href="#frameworks" title="Frameworks"></a>
+  <a href="#trainings" title="Trainings"></a>
+  <a href="#impact" title="Impact"></a>
+  <a href="#work" title="Featured Work"></a>
+  <a href="#resources" title="Resources"></a>
+  <a href="#faq" title="FAQ"></a>
+  <a href="#contact" title="Contact"></a>
+</nav>
+
 <!-- NAVBAR -->
 <nav id="navbar" style="position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid #E8E8E4;transform:translateY(-100%);opacity:0;transition:transform .3s ease,opacity .3s ease;">
   <div style="max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;">
@@ -98,7 +120,8 @@
     <a href="#work" class="nav-link" onclick="document.getElementById('mobile-menu').classList.remove('open')">Featured Work</a>
     <a href="#resources" class="nav-link" onclick="document.getElementById('mobile-menu').classList.remove('open')">Resources</a>
     <a href="#contact" class="nav-link" onclick="document.getElementById('mobile-menu').classList.remove('open')">Contact</a>
-    <a href="https://bridgealliance.app.neoncrm.com/forms/34" target="_blank" rel="noopener" class="btn-primary" style="text-align:center;margin-top:.5rem;">Newsletter Signup</a>
+    <a href="#trainings" class="btn-primary" style="text-align:center;margin-top:.5rem;" onclick="document.getElementById('mobile-menu').classList.remove('open')">Get Training</a>
+    <a href="https://bridgealliance.app.neoncrm.com/forms/34" target="_blank" rel="noopener" class="btn-outline" style="text-align:center;margin-top:.25rem;">Newsletter Signup</a>
   </div>
 </nav>
 
@@ -123,8 +146,8 @@
   <div style="max-width:1200px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem;margin-bottom:1.25rem;">
       <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="70">70</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Students Trained</div></div>
-      <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="10">10</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">University Campuses</div></div>
-      <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="4">4</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Partner Public Radio Stations</div></div>
+      <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="16" data-suffix="+">16+</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">University Campuses</div></div>
+      <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="8">8</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Partner Public Radio Stations</div></div>
       <div class="reveal" style="text-align:center;"><div class="stat-num" data-target="3">3</div><div class="ff-heading" style="font-size:.8rem;color:var(--muted);margin-top:.4rem;font-weight:500;">Core Frameworks</div></div>
     </div>
     <p style="font-size:.72rem;color:var(--light);text-align:center;">Source: News Ambassadors program data, 2023-2024 expanded pilot</p>
@@ -230,13 +253,13 @@
       <img src="Quote%20bubbles%20-%20Training%20%26%20mentorship%20testimonial.png" alt="Training and mentorship testimonials" style="width:100%;max-width:450px;display:block;">
     </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;">
-      <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"Those 22 questions... literally should be in every single journalism class around the world."</p><footer style="font-size:.78rem;color:var(--light);">Nino, Montclair Student</footer></blockquote>
-      <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"It's almost like bringing more humanity into the reporting process..."</p><footer style="font-size:.78rem;color:var(--light);">Calvin, Northwestern Student</footer></blockquote>
-      <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"It's not a vertical approach of journalism... it's more of a circular approach."</p><footer style="font-size:.78rem;color:var(--light);">Santiago, NA Fellow, Latino News Network</footer></blockquote>
-      <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"As someone who has been conflicted about calling themself a journalist, the concept of Solutions Journalism made me realize the positive impact journalism can have."</p><footer style="font-size:.78rem;color:var(--light);">Survey respondent, Depolarization Training</footer></blockquote>
-      <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"She gave me actual tools... the Solutions Journalism tracker and sites that help identify news coverage gaps. That was a game-changer."</p><footer style="font-size:.78rem;color:var(--light);">NA Fellow, on mentorship</footer></blockquote>
-      <blockquote class="reveal"><div style="width:20px;height:2px;background:var(--purple);margin-bottom:1.25rem;"></div><p class="ff-display" style="font-size:1.05rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"Even if it is a place that hires me to do story, story, story, I'm still going to take these 22 questions with me."</p><footer style="font-size:.78rem;color:var(--light);">Nino, Montclair Student</footer></blockquote>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+      <blockquote class="reveal" style="margin:0;padding:1.5rem 1.5rem 1.5rem 1.75rem;border-left:3px solid var(--purple);background:#FAFAFA;"><p class="ff-display" style="font-size:1rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"Those 22 questions... literally should be in every single journalism class around the world."</p><footer style="font-size:.78rem;color:var(--light);">Nino, Montclair State University</footer></blockquote>
+      <blockquote class="reveal" style="margin:0;padding:1.5rem 1.5rem 1.5rem 1.75rem;border-left:3px solid var(--purple);background:#FAFAFA;"><p class="ff-display" style="font-size:1rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"It's almost like bringing more humanity into the reporting process..."</p><footer style="font-size:.78rem;color:var(--light);">Calvin, Northwestern University</footer></blockquote>
+      <blockquote class="reveal" style="margin:0;padding:1.5rem 1.5rem 1.5rem 1.75rem;border-left:3px solid var(--purple);background:#FAFAFA;"><p class="ff-display" style="font-size:1rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"It's not a vertical approach of journalism... it's more of a circular approach."</p><footer style="font-size:.78rem;color:var(--light);">Santiago, NA Fellow, Latino News Network</footer></blockquote>
+      <blockquote class="reveal" style="margin:0;padding:1.5rem 1.5rem 1.5rem 1.75rem;border-left:3px solid var(--purple);background:#FAFAFA;"><p class="ff-display" style="font-size:1rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"As someone who has been conflicted about calling themself a journalist, the concept of Solutions Journalism made me realize the positive impact journalism can have."</p><footer style="font-size:.78rem;color:var(--light);">Survey respondent, Depolarization Training</footer></blockquote>
+      <blockquote class="reveal" style="margin:0;padding:1.5rem 1.5rem 1.5rem 1.75rem;border-left:3px solid var(--purple);background:#FAFAFA;"><p class="ff-display" style="font-size:1rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"She gave me actual tools... the Solutions Journalism tracker and sites that help identify news coverage gaps. That was a game-changer."</p><footer style="font-size:.78rem;color:var(--light);">NA Fellow, on mentorship</footer></blockquote>
+      <blockquote class="reveal" style="margin:0;padding:1.5rem 1.5rem 1.5rem 1.75rem;border-left:3px solid var(--purple);background:#FAFAFA;"><p class="ff-display" style="font-size:1rem;font-style:italic;font-weight:500;line-height:1.8;margin-bottom:.875rem;">"Even if it is a place that hires me to do story, story, story, I'm still going to take these 22 questions with me."</p><footer style="font-size:.78rem;color:var(--light);">Nino, Montclair State University</footer></blockquote>
     </div>
   </div>
 </section>
@@ -245,13 +268,35 @@
 <section style="padding:2.5rem 1.5rem;background:#FAFAFA;border-top:1px solid #EBEBEB;border-bottom:1px solid #EBEBEB;">
   <div style="max-width:1200px;margin:0 auto;">
     <p class="ff-heading" style="font-weight:700;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:1.5rem;text-align:center;">Partner Universities &amp; Newsrooms</p>
-    <div style="display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;align-items:center;">
-      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">University of Missouri School of Journalism</span>
-      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">Columbia University Graduate School of Journalism</span>
-      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">Northwestern University</span>
-      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">Montclair State University</span>
-      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;">Latino News Network</span>
-      <span style="font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--muted);padding:.4rem 1rem;border:1px solid #DCDCDC;background:#fff;"><a href="https://www.kbia.org" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">KBIA</a></span>
+    <p class="ff-heading" style="font-weight:700;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:.75rem;margin-top:1.5rem;text-align:center;">Universities</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-items:center;margin-bottom:1.5rem;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">University of Missouri</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Columbia University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">CUNY</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Montclair State University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Morehouse College</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Prairie View A&amp;M University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Stony Brook University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">University of Nevada, Reno</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">University of Georgia</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Endicott College</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Arizona State University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Temple University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Northwestern University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Morgan State University</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">University of Houston</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">Columbia College Chicago</span>
+    </div>
+    <p class="ff-heading" style="font-weight:700;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-bottom:.75rem;text-align:center;">Public Radio Partners</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;align-items:center;">
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;"><a href="https://www.kbia.org" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">KBIA</a></span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">KALW</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">KJZZ</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">WBEZ</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">WUGA</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">KUNR</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">WMSCU</span>
+      <span style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:500;color:var(--muted);padding:.3rem .875rem;border:1px solid #DCDCDC;background:#fff;">WSHU</span>
     </div>
   </div>
 </section>
@@ -267,7 +312,7 @@
 
       <div class="reveal" style="margin-bottom:2.5rem;">
         <p class="ff-heading" style="font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:.875rem;">Classrooms &amp; Newsrooms</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSetWSNbnSZ0yjbGY9fhAUdq-xJRzjZCAQuILVtns6MXuBstiQ/viewform" target="_blank" rel="noopener" class="btn-primary">Sign Up for Training</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSetWSNbnSZ0yjbGY9fhAUdq-xJRzjZCAQuILVtns6MXuBstiQ/viewform" target="_blank" rel="noopener" class="btn-primary">Sign Up for Training &rarr;</a>
       </div>
     </div>
 
@@ -730,18 +775,36 @@
   var observer=new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(!entry.isIntersecting) return;
-      var el=entry.target,target=parseInt(el.dataset.target,10),duration=1400,startTime=null;
+      var el=entry.target,target=parseInt(el.dataset.target,10),suffix=el.dataset.suffix||'',duration=1400,startTime=null;
       function tick(ts){
         if(!startTime) startTime=ts;
         var p=Math.min((ts-startTime)/duration,1),ease=1-Math.pow(1-p,3);
-        el.textContent=Math.round(ease*target);
-        if(p<1) requestAnimationFrame(tick); else el.textContent=target;
+        el.textContent=Math.round(ease*target)+suffix;
+        if(p<1) requestAnimationFrame(tick); else el.textContent=target+suffix;
       }
       requestAnimationFrame(tick);
       observer.unobserve(el);
     });
   },{threshold:.4});
   counters.forEach(function(el){el.textContent='0';observer.observe(el);});
+})();
+(function(){
+  var sections=['top','about','frameworks','trainings','impact','work','resources','faq','contact'];
+  var dots=document.querySelectorAll('#dot-nav a');
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var id=e.target.id;
+        dots.forEach(function(d){
+          d.classList.toggle('active',d.getAttribute('href')==='#'+id);
+        });
+      }
+    });
+  },{rootMargin:'-40% 0px -40% 0px'});
+  sections.forEach(function(id){
+    var el=document.getElementById(id)||document.querySelector('#'+id);
+    if(el) observer.observe(el);
+  });
 })();
 document.querySelectorAll('details').forEach(function(d){
   d.addEventListener('toggle',function(){
