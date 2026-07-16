@@ -54,6 +54,17 @@
     .footer-link:hover { color:#fff; }
     .tab-btn { font-family:'DM Sans',sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.04em;padding:.6rem 1.25rem;text-decoration:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;transition:color .2s,border-color .2s;background:none;border-top:none;border-left:none;border-right:none; }
     .tab-btn:hover,.tab-btn.active { color:var(--purple);border-bottom-color:var(--purple); }
+    .tl-detail>summary { list-style:none;cursor:pointer; }
+    .tl-detail>summary::-webkit-details-marker { display:none; }
+    .tl-row { display:grid;grid-template-columns:1fr 32px 1fr;margin-bottom:2.5rem;align-items:start; }
+    .tl-row:last-child { margin-bottom:0; }
+    @media(max-width:600px){
+      .tl-row { display:block;padding-left:1.25rem;border-left:2px solid var(--purple);margin-bottom:1.75rem; }
+      .tl-center,.tl-empty { display:none !important; }
+      .tl-left,.tl-right { text-align:left !important;padding:0 !important; }
+      .tl-detail>summary p { text-align:left !important; }
+      #tl-spine { display:none; }
+    }
   </style>
 </head>
 <body>
@@ -189,6 +200,13 @@
       </p>
     </div>
 
+    <!-- Director bio -->
+    <div id="director" style="margin-bottom:6rem;padding:2.5rem;background:#FAFAFA;border-left:3px solid var(--purple);">
+      <span class="overline reveal" style="color:var(--muted);">Meet the Director</span>
+      <h3 class="ff-display reveal" style="font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;line-height:1.2;margin-bottom:1rem;">Shia Levitt</h3>
+      <p class="reveal" style="color:var(--muted);line-height:1.9;font-size:.95rem;max-width:660px;">Shia Levitt is a longtime public radio journalist and journalism educator who has reported from East and West Africa, Asia and the Middle East for NPR, Marketplace, and other outlets. She is an <a href="https://www.solutionsjournalism.org/profile/shia-levitt" target="_blank" rel="noopener" style="color:var(--purple);text-decoration:none;font-weight:600;">accredited trainer of both CTN and Solutions Journalism</a>, and director and creator of News Ambassadors. Levitt gave a preview of some of the depolarization methods at <a href="https://citizenuniversity.us/news/civic-culture-guidance/" target="_blank" rel="noopener" style="color:var(--purple);text-decoration:none;font-weight:600;">Citizen University's 2024 webinar</a> on "Strategies for Journalists and Storytellers to Strengthen Civic Culture."</p>
+    </div>
+
     <!-- Frameworks -->
     <div id="frameworks">
       <span class="overline reveal">Our Frameworks</span>
@@ -226,7 +244,7 @@
           <div class="reveal">
             <p class="ff-heading" style="font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:1.5rem;">Core Techniques</p>
             <div style="padding:1.25rem 0;border-bottom:1px solid #EBEBEB;"><p class="ff-heading" style="font-weight:700;font-size:.95rem;margin-bottom:.35rem;">Looping</p><p style="font-size:.85rem;color:var(--muted);line-height:1.65;">A mediation practice: reflect back exactly what the source said before asking the next question, confirming understanding and signaling genuine listening.</p></div>
-            <div style="padding:1.25rem 0;border-bottom:1px solid #EBEBEB;"><p class="ff-heading" style="font-weight:700;font-size:.95rem;margin-bottom:.35rem;">The 22 Questions</p><p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Amanda Ripley's questions designed to complicate stories and draw out nuance, revealing what people on all sides actually care about and where they feel unheard. <a href="https://docs.google.com/document/d/1RvN9rKlTWks0hlWTAgBKv8b_a-jnkpG2L5w1pv3UB1E/edit?tab=t.0" target="_blank" rel="noopener" style="color:var(--purple);text-decoration:none;font-weight:600;">View the full list.</a></p></div>
+            <div style="padding:1.25rem 0;border-bottom:1px solid #EBEBEB;"><p class="ff-heading" style="font-weight:700;font-size:.95rem;margin-bottom:.35rem;">The 22 Questions</p><p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Amanda Ripley's questions designed to complicate stories and draw out nuance, revealing what people on all sides actually care about and where they feel unheard. <a href="https://thewholestory.solutionsjournalism.org/22-questions-that-complicate-the-narrative-47f2649efa0e" target="_blank" rel="noopener" style="color:var(--purple);text-decoration:none;font-weight:600;">View the full list.</a></p></div>
             <div style="padding:1.25rem 0;"><p class="ff-heading" style="font-weight:700;font-size:.95rem;margin-bottom:.35rem;">The Onion Model</p><p style="font-size:.85rem;color:var(--muted);line-height:1.65;">Moving from surface positions to underlying needs, fears, and shared values to understand why people hold the positions they do.</p></div>
           </div>
         </div>
@@ -285,7 +303,7 @@
           <div class="reveal" style="padding:1rem 0;border-bottom:1px solid #EBEBEB;"><p class="ff-heading" style="font-weight:600;font-size:.9rem;margin-bottom:.3rem;">Depolarization / Complicating the Narratives</p><p style="font-size:.82rem;color:var(--muted);line-height:1.6;">The method codesigned by Amanda Ripley and Helene Biandudi Hofer, born from conflict mediation psychology research</p></div>
           <div class="reveal" style="padding:1rem 0;"><p class="ff-heading" style="font-weight:600;font-size:.9rem;margin-bottom:.3rem;">Community Engagement</p><p style="font-size:.82rem;color:var(--muted);line-height:1.6;">Mentorship support for news-academic partnerships, community surveys, listening sessions, and Information Ecosystem Assessments</p></div>
         </div>
-        <p class="reveal" style="font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;">News Ambassadors director <strong style="color:var(--ink);">Shia Levitt</strong> is an accredited trainer of the Complicating the Narratives method and gave a preview at Citizen University's fall webinar on "Strategies for Journalists and Storytellers to Strengthen Civic Culture."</p>
+        <p class="reveal" style="font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;">Trainings are led by News Ambassadors director <a href="#director" style="color:var(--purple);text-decoration:none;font-weight:600;">Shia Levitt</a>, an accredited trainer of both CTN and Solutions Journalism with a background reporting for NPR and Marketplace.</p>
         <a href="#contact" class="btn-primary reveal">Get in Touch</a>
       </div>
       <div>
@@ -487,11 +505,11 @@
             <div style="width:5px;height:5px;background:var(--pink);flex-shrink:0;margin-top:.5rem;"></div>
             <div><div class="res-title">Complicating the Narratives (Original Article)</div><div class="res-desc">Amanda Ripley's foundational article introducing the Complicating the Narratives method for journalists covering polarizing issues</div></div>
           </a>
-          <a href="https://docs.google.com/document/d/1RvN9rKlTWks0hlWTAgBKv8b_a-jnkpG2L5w1pv3UB1E/edit?tab=t.0" target="_blank" rel="noopener" class="res-item">
+          <a href="https://thewholestory.solutionsjournalism.org/22-questions-that-complicate-the-narrative-47f2649efa0e" target="_blank" rel="noopener" class="res-item">
             <div style="width:5px;height:5px;background:var(--pink);flex-shrink:0;margin-top:.5rem;"></div>
             <div><div class="res-title">The 22 Questions Tool</div><div class="res-desc">Amanda Ripley and Helene Biandudi Hofer's core questions for complicating stories and drawing out nuance in polarized coverage</div></div>
           </a>
-          <a href="https://trusting.news" target="_blank" rel="noopener" class="res-item">
+          <a href="https://trustingnews.org/newsletter/" target="_blank" rel="noopener" class="res-item">
             <div style="width:5px;height:5px;background:var(--pink);flex-shrink:0;margin-top:.5rem;"></div>
             <div><div class="res-title">Trust Tips Newsletter (Trusting News)</div><div class="res-desc">Regular newsletter on trust-building practices for journalists and newsrooms</div></div>
           </a>
@@ -524,13 +542,78 @@
 <!-- PROJECT HISTORY & PARTNERS -->
 <section id="history" style="padding:5rem 1.5rem;background:#fff;border-top:1px solid #EBEBEB;">
   <div style="max-width:1200px;margin:0 auto;">
-    <div style="max-width:780px;">
+    <div style="max-width:760px;">
       <span class="overline reveal" style="color:var(--light);">Project History &amp; Partners</span>
-      <p class="reveal" style="color:var(--muted);line-height:1.9;margin-bottom:1.25rem;font-size:.9rem;">Our 2023-2024 partners and collaborators <a href="https://trustingnews.org/" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">Trusting News</a> and <a href="https://www.solutionsjournalism.org/" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">Solutions Journalism Network</a> provided guidance on the revised model for the expanded pilot. Prior to joining the Bridge Alliance Education Fund, an early version of News Ambassadors was incubated and a smaller inaugural pilot was launched as part of <a href="https://digitalcitizen.tv/2021/07/19/about-news-ambassadors/" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">InterAct's Digital Citizen Project</a>, which has been connecting Americans to their leaders, each other, and the world since 1998. InterAct's connections in the civic participatory media and cross-partisan dialogue world helped shape the project design. Fall 2022 InterAct pilot partners were the University of Missouri School of Journalism in Columbia, MO; and the Audio Department at Columbia University's Graduate School of Journalism in New York, NY. Our first News Ambassadors stories, reported prior to our solutions journalism and Complicating the Narratives focus, resulted in <a href="https://www.kbia.org/2022-12-20/from-the-heartland-to-the-hudson-access-to-housing-is-a-struggle-and-solutions-arent-simple" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">this KBIA segment</a> on the struggles for affordable housing in both rural Moberly, Missouri, and urban Brooklyn, New York. In 2021, News Ambassadors created <a href="https://digitalcitizen.tv/2021/04/18/news-ambassadors-5-min/" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">a series of short audio pieces</a> with student reporters in five states, exploring the regional differences on issues surrounding the COVID-19 virus in the US.</p>
-      <p class="reveal" style="color:var(--muted);line-height:1.9;margin-bottom:1.75rem;font-size:.9rem;">News Ambassadors follows the same journalism ethics and integrity policy and editorial independence policy as the <a href="https://www.spj.org/ethicscode.asp" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">Society for Professional Journalists</a>.</p>
-      <p class="ff-heading reveal" style="font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:.875rem;">Sponsors &amp; Donors</p>
-      <p class="reveal" style="color:var(--muted);line-height:1.9;margin-bottom:.5rem;font-size:.875rem;">News Ambassadors would like to thank the following sponsors and donors who have each contributed more than $5,000 in one year:</p>
-      <ul class="reveal" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.35rem;">
+
+      <!-- Center-spine alternating timeline -->
+      <div style="position:relative;margin:2.5rem 0 3rem;" class="reveal">
+        <!-- Spine -->
+        <div id="tl-spine" style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:#E4E4E4;transform:translateX(-0.5px);z-index:0;"></div>
+
+        <!-- 2021: LEFT -->
+        <div class="tl-row">
+          <div class="tl-left" style="text-align:right;padding-right:1.75rem;">
+            <details class="tl-detail">
+              <summary>
+                <p class="ff-heading" style="font-weight:700;font-size:.875rem;color:var(--ink);line-height:1.4;margin-bottom:.2rem;text-align:right;">COVID-19 Regional Audio Series</p>
+                <p style="text-align:right;font-family:'DM Sans',sans-serif;font-size:.72rem;color:var(--purple);font-weight:600;">2021 &middot; Read more +</p>
+              </summary>
+              <div style="margin-top:.875rem;">
+                <p style="font-size:.8rem;color:var(--muted);line-height:1.8;text-align:right;">News Ambassadors created <a href="https://digitalcitizen.tv/2021/04/18/news-ambassadors-5-min/" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">a series of short audio pieces</a> with student reporters in five states, exploring the regional differences on issues surrounding the COVID-19 virus in the US. Incubated as part of <a href="https://digitalcitizen.tv/2021/07/19/about-news-ambassadors/" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">InterAct's Digital Citizen Project</a>, which has been connecting Americans to their leaders, each other, and the world since 1998. InterAct's connections in the civic participatory media and cross-partisan dialogue world helped shape the project design.</p>
+              </div>
+            </details>
+          </div>
+          <div class="tl-center" style="display:flex;justify-content:center;padding-top:.15rem;position:relative;z-index:1;">
+            <div style="width:10px;height:10px;background:var(--purple);flex-shrink:0;"></div>
+          </div>
+          <div class="tl-empty"></div>
+        </div>
+
+        <!-- Fall 2022: RIGHT -->
+        <div class="tl-row">
+          <div class="tl-empty"></div>
+          <div class="tl-center" style="display:flex;justify-content:center;padding-top:.15rem;position:relative;z-index:1;">
+            <div style="width:10px;height:10px;background:var(--purple);flex-shrink:0;"></div>
+          </div>
+          <div class="tl-right" style="padding-left:1.75rem;">
+            <details class="tl-detail">
+              <summary>
+                <p class="ff-heading" style="font-weight:700;font-size:.875rem;color:var(--ink);line-height:1.4;margin-bottom:.2rem;">KBIA Affordable Housing Segment</p>
+                <p style="font-family:'DM Sans',sans-serif;font-size:.72rem;color:var(--purple);font-weight:600;">Fall 2022 &middot; Read more +</p>
+              </summary>
+              <div style="margin-top:.875rem;">
+                <p style="font-size:.8rem;color:var(--muted);line-height:1.8;">Inaugural pilot with the University of Missouri School of Journalism in Columbia, MO and the Audio Department at Columbia University's Graduate School of Journalism in New York, NY. Our first stories, reported prior to our solutions journalism and Complicating the Narratives focus, resulted in <a href="https://www.kbia.org/2022-12-20/from-the-heartland-to-the-hudson-access-to-housing-is-a-struggle-and-solutions-arent-simple" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">this KBIA segment</a> on the struggles for affordable housing in both rural Moberly, Missouri, and urban Brooklyn, New York.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- 2023-2024: LEFT -->
+        <div class="tl-row">
+          <div class="tl-left" style="text-align:right;padding-right:1.75rem;">
+            <details class="tl-detail">
+              <summary>
+                <p class="ff-heading" style="font-weight:700;font-size:.875rem;color:var(--ink);line-height:1.4;margin-bottom:.2rem;text-align:right;">Expanded Pilot with New Partners</p>
+                <p style="text-align:right;font-family:'DM Sans',sans-serif;font-size:.72rem;color:var(--purple);font-weight:600;">2023-2024 &middot; Read more +</p>
+              </summary>
+              <div style="margin-top:.875rem;">
+                <p style="font-size:.8rem;color:var(--muted);line-height:1.8;text-align:right;">Partners and collaborators <a href="https://trustingnews.org/" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">Trusting News</a> and <a href="https://www.solutionsjournalism.org/" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">Solutions Journalism Network</a> provided guidance on the revised model for the expanded pilot, helping grow the program to 70 students across 10 university campuses alongside 4 public radio partners.</p>
+              </div>
+            </details>
+          </div>
+          <div class="tl-center" style="display:flex;justify-content:center;padding-top:.15rem;position:relative;z-index:1;">
+            <div style="width:10px;height:10px;background:var(--purple);flex-shrink:0;"></div>
+          </div>
+          <div class="tl-empty"></div>
+        </div>
+
+      </div>
+
+      <p class="reveal" style="color:var(--muted);line-height:1.9;margin-bottom:2rem;font-size:.875rem;">News Ambassadors follows the same journalism ethics and integrity policy and editorial independence policy as the <a href="https://www.spj.org/ethicscode.asp" target="_blank" rel="noopener" style="color:var(--ink);text-decoration:underline;text-underline-offset:3px;">Society for Professional Journalists</a>.</p>
+
+      <p class="ff-heading reveal" style="font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin-bottom:.75rem;">Sponsors &amp; Donors</p>
+      <p class="reveal" style="color:var(--muted);line-height:1.9;margin-bottom:.75rem;font-size:.875rem;">News Ambassadors would like to thank the following sponsors and donors who have each contributed more than $5,000 in one year:</p>
+      <ul class="reveal" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
         <li style="font-size:.875rem;color:var(--muted);display:flex;align-items:center;gap:.75rem;"><span style="width:4px;height:4px;background:var(--purple);display:inline-block;flex-shrink:0;"></span>Bernard and Audre Rapoport Foundation</li>
         <li style="font-size:.875rem;color:var(--muted);display:flex;align-items:center;gap:.75rem;"><span style="width:4px;height:4px;background:var(--purple);display:inline-block;flex-shrink:0;"></span>Bridge Alliance Education Fund</li>
         <li style="font-size:.875rem;color:var(--muted);display:flex;align-items:center;gap:.75rem;"><span style="width:4px;height:4px;background:var(--purple);display:inline-block;flex-shrink:0;"></span>Listening Post Collective</li>
@@ -572,7 +655,13 @@
         <p style="font-size:.875rem;color:var(--muted);margin-bottom:.5rem;">Email us directly:</p>
         <a href="mailto:sojonewsambassadors@gmail.com" style="font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;color:var(--purple);text-decoration:none;display:block;margin-bottom:.25rem;">sojonewsambassadors@gmail.com</a>
       </div>
-      <p class="reveal" style="font-size:.85rem;color:var(--muted);line-height:1.7;">For Depolarization Training inquiries, you can also fill out the <a href="https://docs.google.com/document/d/1RvN9rKlTWks0hlWTAgBKv8b_a-jnkpG2L5w1pv3UB1E/edit?tab=t.0" target="_blank" rel="noopener" style="color:var(--purple);text-decoration:none;font-weight:600;">Depolarization Training Interest Form</a>.</p>
+      <div class="reveal" style="margin-top:.5rem;">
+        <p style="font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:.6rem;">Training interest forms:</p>
+        <div style="display:flex;flex-direction:column;gap:.4rem;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSetWSNbnSZ0yjbGY9fhAUdq-xJRzjZCAQuILVtns6MXuBstiQ/viewform" target="_blank" rel="noopener" style="font-size:.85rem;color:var(--purple);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:.5rem;"><span style="width:4px;height:4px;background:var(--purple);display:inline-block;flex-shrink:0;"></span>Classrooms &amp; Newsrooms Interest Form</a>
+          <a href="mailto:sojonewsambassadors@gmail.com" style="font-size:.85rem;color:var(--purple);text-decoration:none;font-weight:600;display:flex;align-items:center;gap:.5rem;"><span style="width:4px;height:4px;background:var(--purple);display:inline-block;flex-shrink:0;"></span>Individuals &amp; Non-Journalists: Email us</a>
+        </div>
+      </div>
     </div>
     <div>
       <span class="overline reveal" style="color:#7a6000;">Support Our Work</span>
